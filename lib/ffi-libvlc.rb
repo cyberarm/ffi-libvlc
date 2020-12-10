@@ -14,7 +14,7 @@ module LibVLC
 
   attach_function :libvlc_new, [:int, :string], :pointer
   attach_function :libvlc_release, [:pointer], :void
-  attach_function :vlc_version, :libvlc_get_version, [], :string
+  attach_function :libvlc_version, :libvlc_get_version, [], :string
 
   def self.instance
     @instance

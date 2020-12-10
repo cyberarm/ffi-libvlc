@@ -47,5 +47,17 @@ module LibVLC
     def stop
       LibVLC.libvlc_media_player_stop(@pointer)
     end
+
+	def length
+	  LibVLC.libvlc_media_player_get_length(@pointer)
+	end
+
+	def time
+	  LibVLC.libvlc_media_player_get_time(@pointer)
+    end
+
+	def time=(milliseconds)
+	  LibVLC.libvlc_media_player_set_time(@pointer, milliseconds, false)
+	end
   end
 end
